@@ -5,7 +5,12 @@ export default class Component {
   constructor($target: HTMLElement, props?: any) {
     this.$target = $target;
     this.props = props;
+    this.init();
     this.render();
+  }
+
+  init(): void {
+    // state set
   }
 
   template(): string {

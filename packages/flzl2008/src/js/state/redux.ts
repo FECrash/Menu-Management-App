@@ -9,7 +9,7 @@ export default function createStore(reducer: Redux.reducer): Redux.Store {
 
   const getState: Redux.getState = () => state;
   const subscribe: Redux.subscribe = (fn: Redux.subscribeFunction) => listeners.push(fn);
-  const publish = () => listeners.forEach(listener => listener());
+  const publish = () => listeners.forEach(fn => fn());
 
   return {
     subscribe,

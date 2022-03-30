@@ -30,6 +30,7 @@ const addMenuAction = event => {
         class="text-base font-normal w-full h-auto px-5 py-3 border-none outline-none rounded-[2rem] bg-[#f1f5f9]"
         :placeholder="selected.text + '이름'"
         autocomplete="off"
+        @keydown="handleKeydown"
       />
       <button
         :id="selected.id + '-menu-submit-button'"

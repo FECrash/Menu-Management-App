@@ -1,5 +1,12 @@
+interface Category {
+  emoji: string;
+  name: string;
+  value: string;
+}
+
 interface CafeMenuState {
-  categoryNames: string[];
+  categorys: Category[];
+  selectedCategory: Category;
   menuNames: string[];
 }
 
